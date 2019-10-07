@@ -1,0 +1,23 @@
+program Estudo;
+
+uses
+  Vcl.Forms,
+  uPrincipal in 'uPrincipal.pas' {frmPrincipal},
+  uModulo in 'uModulo.pas' {dm: TDataModule},
+  uRelatorio in 'uRelatorio.pas' {frmRelatorio},
+  uBase in 'uBase.pas' {frmSocio},
+  uSocio in 'uSocio.pas' {Form1},
+  uDependente in 'uDependente.pas' {Form2};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TfrmSocio, frmSocio);
+  Application.CreateForm(Tdm, dm);
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm2, Form2);
+  Application.Run;
+end.

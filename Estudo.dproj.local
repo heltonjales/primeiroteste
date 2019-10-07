@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/10/06 11:42:21.000.769,=C:\Users\Elton\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/10/06 11:43:06.000.827,=C:\Users\Elton\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2019/10/06 11:43:50.000.607,C:\Users\Elton\Desktop\projeto_estudo\uModulo.dfm=C:\Users\Elton\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2019/10/06 11:43:50.000.607,C:\Users\Elton\Desktop\projeto_estudo\uModulo.pas=C:\Users\Elton\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2019/10/06 11:43:59.000.013,C:\Users\Elton\Desktop\projeto_estudo\uPrincipal.pas=C:\Users\Elton\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/10/06 11:43:59.000.013,C:\Users\Elton\Desktop\projeto_estudo\uPrincipal.dfm=C:\Users\Elton\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2019/10/06 11:44:06.000.340,C:\Users\Elton\Desktop\projeto_estudo\Estudo.dproj=C:\Users\Elton\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2019/10/06 11:46:46.000.508,=C:\Users\Elton\Desktop\projeto_estudo\Unit2.pas</Transaction>
+    <Transaction>2019/10/06 11:47:00.000.505,C:\Users\Elton\Desktop\projeto_estudo\uSocio.dfm=C:\Users\Elton\Desktop\projeto_estudo\Unit2.dfm</Transaction>
+    <Transaction>2019/10/06 11:47:00.000.505,C:\Users\Elton\Desktop\projeto_estudo\uSocio.pas=C:\Users\Elton\Desktop\projeto_estudo\Unit2.pas</Transaction>
+    <Transaction>2019/10/06 11:47:06.000.560,=C:\Users\Elton\Desktop\projeto_estudo\Unit3.pas</Transaction>
+    <Transaction>2019/10/06 11:47:14.000.346,C:\Users\Elton\Desktop\projeto_estudo\uDependente.dfm=C:\Users\Elton\Desktop\projeto_estudo\Unit3.dfm</Transaction>
+    <Transaction>2019/10/06 11:47:14.000.346,C:\Users\Elton\Desktop\projeto_estudo\uDependente.pas=C:\Users\Elton\Desktop\projeto_estudo\Unit3.pas</Transaction>
+    <Transaction>2019/10/06 11:48:46.000.839,=C:\Users\Elton\Desktop\projeto_estudo\Unit4.pas</Transaction>
+    <Transaction>2019/10/06 11:48:57.000.886,C:\Users\Elton\Desktop\projeto_estudo\uRelatorio.dfm=C:\Users\Elton\Desktop\projeto_estudo\Unit4.dfm</Transaction>
+    <Transaction>2019/10/06 11:48:57.000.886,C:\Users\Elton\Desktop\projeto_estudo\uRelatorio.pas=C:\Users\Elton\Desktop\projeto_estudo\Unit4.pas</Transaction>
+    <Transaction>2019/10/06 12:20:49.000.549,C:\Users\Elton\Desktop\projeto_estudo\uSocio.pas=</Transaction>
+    <Transaction>2019/10/06 12:20:49.000.537,C:\Users\Elton\Desktop\projeto_estudo\uDependente.pas=</Transaction>
+    <Transaction>2019/10/06 12:20:56.000.327,=C:\Users\Elton\Desktop\projeto_estudo\Unit1.pas</Transaction>
+    <Transaction>2019/10/06 12:21:47.000.485,C:\Users\Elton\Desktop\projeto_estudo\uBase.pas=C:\Users\Elton\Desktop\projeto_estudo\Unit1.pas</Transaction>
+    <Transaction>2019/10/06 12:21:47.000.485,C:\Users\Elton\Desktop\projeto_estudo\uBase.dfm=C:\Users\Elton\Desktop\projeto_estudo\Unit1.dfm</Transaction>
+    <Transaction>2019/10/06 20:53:38.000.625,=C:\Users\Elton\Desktop\projeto_estudo\Unit1.pas</Transaction>
+    <Transaction>2019/10/06 21:57:13.000.672,=C:\Users\Elton\Desktop\projeto_estudo\Unit1.pas</Transaction>
+    <Transaction>2019/10/06 21:58:02.000.489,C:\Users\Elton\Desktop\projeto_estudo\Unit1.dfm=C:\Users\Elton\Desktop\projeto_estudo\uSocio.dfm</Transaction>
+    <Transaction>2019/10/06 21:58:02.000.489,C:\Users\Elton\Desktop\projeto_estudo\Unit1.pas=C:\Users\Elton\Desktop\projeto_estudo\uSocio.pas</Transaction>
+    <Transaction>2019/10/06 21:58:33.000.948,=C:\Users\Elton\Desktop\projeto_estudo\Unit2.pas</Transaction>
+    <Transaction>2019/10/06 21:58:48.000.324,C:\Users\Elton\Desktop\projeto_estudo\Unit2.pas=C:\Users\Elton\Desktop\projeto_estudo\uDependente.pas</Transaction>
+    <Transaction>2019/10/06 21:58:48.000.324,C:\Users\Elton\Desktop\projeto_estudo\Unit2.dfm=C:\Users\Elton\Desktop\projeto_estudo\uDependente.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

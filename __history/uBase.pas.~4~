@@ -1,0 +1,52 @@
+unit uBase;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Buttons,
+  Vcl.ComCtrls;
+
+type
+  TfrmSocio = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    Panel4: TPanel;
+    Panel5: TPanel;
+    Panel6: TPanel;
+    Label1: TLabel;
+    Panel7: TPanel;
+    Panel8: TPanel;
+    Panel9: TPanel;
+    btnNovo: TButton;
+    btnEditar: TButton;
+    btnExcluir: TButton;
+    Edit1: TEdit;
+    ComboBox1: TComboBox;
+    SpeedButton1: TSpeedButton;
+    Panel10: TPanel;
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmSocio: TfrmSocio;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmSocio.FormShow(Sender: TObject);
+var
+  i : integer;
+begin
+for I := 0 to PageControl1.PageCount - 1 do
+  PageControl1.Pages[i].TabVisible := false;
+  PageControl1.ActivePage := PageControl1.Pages[0];
+end;
+
+end.
