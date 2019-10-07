@@ -113,10 +113,6 @@
             <Form>frmRelatorio</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="uBase.pas">
-            <Form>frmSocio</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="uSocio.pas">
             <Form>frmSocios</Form>
             <FormType>dfm</FormType>

@@ -53,7 +53,7 @@ object dm: Tdm
   end
   object ds_Socios: TDataSource
     DataSet = qr_Socios
-    Left = 152
+    Left = 128
     Top = 104
   end
   object qr_Dependentes: TFDQuery
@@ -94,7 +94,7 @@ object dm: Tdm
   end
   object ds_Dependentes: TDataSource
     DataSet = qr_Dependentes
-    Left = 152
+    Left = 128
     Top = 168
   end
   object qr_Relatorio: TFDQuery
@@ -172,7 +172,7 @@ object dm: Tdm
   end
   object ds_Relatorio: TDataSource
     DataSet = qr_Relatorio
-    Left = 144
-    Top = 248
+    Left = 128
+    Top = 240
   end
 end

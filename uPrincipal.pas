@@ -30,28 +30,28 @@ implementation
 
 {$R *.dfm}
 
-uses uDependente, uRelatorio, uSocio, uBase, uModulo;
+uses uDependente, uRelatorio, uSocio, uModulo;
 
 procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-Action := caFree;
-frmPrincipal := nil;
+  Action := caFree;
+  frmPrincipal := nil;
 end;
 
 procedure TfrmPrincipal.SpeedButton3Click(Sender: TObject);
 begin
-if frmSocios = nil then
-  frmSocios := TfrmSocios.Create(Self);
+  if frmSocios = nil then
+    frmSocios := TfrmSocios.Create(Self);
 
-  frmSocios.Show;
+    frmSocios.Show;
 end;
 
 procedure TfrmPrincipal.SpeedButton4Click(Sender: TObject);
 begin
-if frmDependente = nil then
-  frmDependente := TfrmDependente.Create(Self);
+  if frmDependente = nil then
+    frmDependente := TfrmDependente.Create(Self);
 
-frmDependente.Show;
+  frmDependente.Show;
 end;
 
 procedure TfrmPrincipal.SpeedButton5Click(Sender: TObject);

@@ -277,7 +277,7 @@ object frmRelatorio: TfrmRelatorio
   end
   object RLXLSFilter1: TRLXLSFilter
     DisplayName = 'Planilha Excel 97-2013'
-    Left = 72
-    Top = 392
+    Left = 64
+    Top = 384
   end
 end
