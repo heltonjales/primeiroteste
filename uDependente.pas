@@ -97,23 +97,23 @@ procedure TfrmDependente.btnSalvarClick(Sender: TObject);
 begin
   if Trim(edtIdCod.Text) = '' then
   begin
-    Application.MessageBox('Campo Código Sócio Obrigatório', 'Aviso', MB_OK+MB_DEFBUTTON1+MB_ICONEXCLAMATION);
+    ShowMessage('Campo código sócio obrigatório');
     edtIdCod.SetFocus;
-    abort;
+    exit;
   end;
 
   if Trim(edtNome.Text) = '' then
   begin
-    Application.MessageBox('Campo Nome Obrigatório', 'Aviso', MB_OK+MB_DEFBUTTON1+MB_ICONEXCLAMATION);
+    ShowMessage('Campo nome obrigatório');
     edtNome.SetFocus;
-    abort;
+    exit;
   end;
 
   try
     StrToDate(edtData.Text);
   Except on EConvertError do
   begin
-    Application.MessageBox('Data Inválida', 'Atenção', MB_OK+MB_DEFBUTTON1+MB_ICONEXCLAMATION);
+    ShowMessage('Data Inválida');
     edtData.SetFocus;
     exit;
   end;
@@ -135,6 +135,7 @@ begin
       begin
       if Pos('FK', E.Message) > 0 then
         Application.MessageBox('Código do Sócio não existe!', 'Atenção', MB_OK+MB_DEFBUTTON1+MB_ICONEXCLAMATION);
+        list;
         abort;
       end;
   end;

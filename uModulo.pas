@@ -39,6 +39,9 @@ type
     qr_RelatorioNOME_1: TStringField;
     qr_RelatorioDT_NASCIMENTO: TDateField;
     qr_RelatorioSEXO_1: TStringField;
+
+    procedure DataModuleCreate(Sender: TObject);
+    procedure DataModuleDestroy(Sender: TObject);
   private
     { Private declarations }
   public
@@ -53,5 +56,17 @@ implementation
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+
+{ Tdm }
+
+procedure Tdm.DataModuleCreate(Sender: TObject);
+begin
+  conexao.connected := True;
+end;
+
+procedure Tdm.DataModuleDestroy(Sender: TObject);
+begin
+  conexao.connected := False;
+end;
 
 end.

@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
-  Vcl.Mask, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, System.UITypes, FireDAC.Stan.Param;
+  Vcl.Mask, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, System.UITypes, FireDAC.Stan.Param,
+  uSystemUtils;
 
 type
   TfrmSocios = class(TForm)
@@ -14,11 +15,11 @@ type
     Panel7: TPanel;
     Panel8: TPanel;
     btnEditar: TButton;
+    btnSalvar: TButton;
     btnExcluir: TButton;
-    Button5: TButton;
     btnNovo: TButton;
     Panel9: TPanel;
-    SpeedButton1: TSpeedButton;
+    btnPesquisar: TSpeedButton;
     edtPesquisar: TEdit;
     cbPesquisa: TComboBox;
     Panel4: TPanel;
@@ -40,14 +41,14 @@ type
     DBGrid1: TDBGrid;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure cbPesquisaKeyPress(Sender: TObject; var Key: Char);
-    procedure btnExcluirClick(Sender: TObject);
+    procedure btnSalvarClick(Sender: TObject);
     procedure cbSexoKeyPress(Sender: TObject; var Key: Char);
     procedure edtCpfKeyPress(Sender: TObject; var Key: Char);
     procedure btnNovoClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure DBGrid1CellClick(Column: TColumn);
-    procedure Button5Click(Sender: TObject);
-    procedure SpeedButton1Click(Sender: TObject);
+    procedure btnExcluirClick(Sender: TObject);
+    procedure btnPesquisarClick(Sender: TObject);
   private
     procedure clean;
     procedure list;
@@ -69,23 +70,23 @@ procedure TfrmSocios.btnEditarClick(Sender: TObject);
 begin
   if Trim(edtNome.Text) = '' then
   begin
-    MessageDlg('Campo nome obrigatório', mtInformation, mbOKCancel, 0);
+    ShowMessage('Campo nome obrigatório');
     edtNome.SetFocus;
-    Abort;
+    exit;
   end;
 
   if Trim(edtRenda.Text) = '' then
   begin
-    MessageDlg('Campo renda obrigatório', mtInformation, mbOKCancel, 0);
+    ShowMessage('Campo renda obrigatório');
     edtRenda.SetFocus;
-    Abort;
+    exit;
   end;
 
   if Trim(cbSexo.Text) = '' then
   begin
-    MessageDlg('Campo sexo obrigatório', mtInformation, mbOKCancel, 0);
+    ShowMessage('Campo sexo obrigatório');
     cbSexo.SetFocus;
-    Abort;
+    exit;
   end;
 
   dm.qr_Socios.Close;
@@ -97,26 +98,26 @@ begin
   dm.qr_Socios.ParamByName('sexo').AsString := cbSexo.Text;
   dm.qr_Socios.ExecSQL;
 
-  MessageDlg('Cadastro Atualizado com sucesso!', mtInformation, mbOKCancel, 0);
+  ShowMessage('Cadastro Atualizado com sucesso!');
   clean;
   list;
   edtNome.SetFocus;
 end;
 
-procedure TfrmSocios.btnExcluirClick(Sender: TObject);
+procedure TfrmSocios.btnSalvarClick(Sender: TObject);
 begin
   if Trim(edtNome.Text) = '' then
   begin
-    MessageDlg('Campo nome obrigatório!', mtInformation, mbOKCancel, 0);
+    ShowMessage('Campo nome obrigatório');
     edtNome.SetFocus;
-    Abort;
+    exit;
   end;
 
   if Trim(edtCpf.Text) = '' then
   begin
-    MessageDlg('Campo CPF obrigatório!', mtInformation, mbOKCancel, 0);
+    ShowMessage('Campo CPF obrigatório');
     edtCpf.SetFocus;
-    Abort;
+    exit;
   end;
 
   dm.qr_Socios.Close;
@@ -137,19 +138,18 @@ begin
     dm.qr_Socios.ParamByName('sexo').AsString := cbSexo.Text;
     dm.qr_Socios.ExecSQL;
 
-    MessageDlg('Registro Salvo com Sucesso!', mtInformation, mbOKCancel, 0);
+    ShowMessage('Registro salvo com sucesso');;
     clean;
     list;
     edtNome.SetFocus;
   end
   else
   begin
-    MessageDlg('Sócio já possui cadastro!', mtInformation, mbOKCancel, 0);
+    ShowMessage('O sócio já possui cadastro!');;
     list;
     clean;
     edtNome.SetFocus;
   end;
-
 end;
 
 procedure TfrmSocios.btnNovoClick(Sender: TObject);
@@ -158,9 +158,9 @@ begin
   edtNome.SetFocus;
 end;
 
-procedure TfrmSocios.Button5Click(Sender: TObject);
+procedure TfrmSocios.btnExcluirClick(Sender: TObject);
 begin
-  if MessageDlg('Deseja Excluir o registro?', mtWarning, [mbYes, mbNo], 0) = mrYes then
+  if msgConfirm('Confirma a Exclusão do Registro?') then
   begin
     dm.qr_Socios.Close;
     dm.qr_Socios.SQL.Clear;
@@ -181,7 +181,7 @@ begin
         end;
     end;
 
-    MessageDlg('Registro deletado com sucesso!', mtInformation, mbOKCancel, 0);
+    ShowMessage('Registro deletado com sucesso!');
     clean;
     list;
     edtNome.SetFocus;
@@ -221,7 +221,7 @@ end;
 
 procedure TfrmSocios.edtCpfKeyPress(Sender: TObject; var Key: Char);
 begin
-  if CharInSet(Key,['0'..'9'] ) then
+  if not(isNumber(Key)) then
 end;
 
 procedure TfrmSocios.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -238,7 +238,7 @@ begin
   dm.qr_Socios.Open();
 end;
 
-procedure TfrmSocios.SpeedButton1Click(Sender: TObject);
+procedure TfrmSocios.btnPesquisarClick(Sender: TObject);
 begin
   dm.qr_Socios.Close;
   dm.qr_Socios.SQL.Clear;

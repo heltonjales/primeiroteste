@@ -6,7 +6,8 @@ uses
   uModulo in 'uModulo.pas' {dm: TDataModule},
   uRelatorio in 'uRelatorio.pas' {frmRelatorio},
   uSocio in 'uSocio.pas' {frmSocios},
-  uDependente in 'uDependente.pas' {frmDependente};
+  uDependente in 'uDependente.pas' {frmDependente},
+  uSystemUtils in 'uSystemUtils.pas';
 
 {$R *.res}
 

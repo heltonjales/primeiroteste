@@ -1,0 +1,14 @@
+unit uSystemUtils;
+
+interface
+  function isNumber(key : char) : boolean;
+implementation
+
+uses
+
+function isNumber(key : char) : boolean;
+begin
+  result := CharInSet(Key,['0'..'9']);
+end;
+
+end.

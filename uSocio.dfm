@@ -64,23 +64,23 @@ object frmSocios: TfrmSocios
           TabOrder = 0
           OnClick = btnEditarClick
         end
-        object btnExcluir: TButton
+        object btnSalvar: TButton
           Left = 245
           Top = 22
           Width = 75
           Height = 25
           Caption = 'Salvar'
           TabOrder = 1
-          OnClick = btnExcluirClick
+          OnClick = btnSalvarClick
         end
-        object Button5: TButton
+        object btnExcluir: TButton
           Left = 326
           Top = 22
           Width = 75
           Height = 25
           Caption = 'Excluir'
           TabOrder = 2
-          OnClick = Button5Click
+          OnClick = btnExcluirClick
         end
         object btnNovo: TButton
           Left = 83
@@ -100,13 +100,13 @@ object frmSocios: TfrmSocios
         Align = alLeft
         BevelOuter = bvNone
         TabOrder = 1
-        object SpeedButton1: TSpeedButton
+        object btnPesquisar: TSpeedButton
           Left = 324
           Top = 20
           Width = 75
           Height = 25
           Caption = 'Pesquisar'
-          OnClick = SpeedButton1Click
+          OnClick = btnPesquisarClick
         end
         object edtPesquisar: TEdit
           Left = 16
