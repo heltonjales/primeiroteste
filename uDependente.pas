@@ -109,11 +109,14 @@ begin
     abort;
   end;
 
-  if Trim(edtData.Text) = '' then
+  try
+    StrToDate(edtData.Text);
+  Except on EConvertError do
   begin
-    Application.MessageBox('Campo Data de Nascimento Obrigatório', 'Aviso', MB_OK+MB_DEFBUTTON1+MB_ICONEXCLAMATION);
-    edtNome.SetFocus;
-    abort;
+    Application.MessageBox('Data Inválida', 'Atenção', MB_OK+MB_DEFBUTTON1+MB_ICONEXCLAMATION);
+    edtData.SetFocus;
+    exit;
+  end;
   end;
 
   dm.qr_Dependentes.Close;

@@ -17,6 +17,7 @@ type
     procedure SpeedButton4Click(Sender: TObject);
     procedure SpeedButton5Click(Sender: TObject);
   private
+    procedure ListRel;
 
     { Private declarations }
   public
@@ -38,12 +39,20 @@ begin
   frmPrincipal := nil;
 end;
 
+procedure TfrmPrincipal.ListRel;
+begin
+dm.qr_Relatorio.Close;
+dm.qr_Relatorio.SQL.Clear;
+dm.qr_Relatorio.SQL.Add('SELECT * FROM dependentes LEFT JOIN socios ON dependentes.id_socio = socios.id ORDER BY socios.id');
+dm.qr_Relatorio.Open();
+end;
+
 procedure TfrmPrincipal.SpeedButton3Click(Sender: TObject);
 begin
   if frmSocios = nil then
     frmSocios := TfrmSocios.Create(Self);
 
-    frmSocios.Show;
+  frmSocios.Show;
 end;
 
 procedure TfrmPrincipal.SpeedButton4Click(Sender: TObject);
@@ -57,6 +66,7 @@ end;
 procedure TfrmPrincipal.SpeedButton5Click(Sender: TObject);
 begin
   frmRelatorio := TfrmRelatorio.Create(Self);
+  ListRel;
   frmRelatorio.RLReport1.Preview();
 end;
 
